@@ -1,0 +1,71 @@
+
+.page-wrapper {
+    .content-wrapper { position: relative; padding: 0; width: 100%; 
+        .mainContent { position: relative;
+            .projectTitle { font-size: 1.3rem; font-weight: 700; color: #782c7f; }
+            .category { display: flex; justify-content: center;
+                .categoryButton { width: 25%; height: 100px; border-style: solid; border-color: #518DC9 #518DC9 #782c7f #782c7f; border-width: 2px; border-radius: 10px;
+                    display: flex; align-items: center; justify-content: center; flex-direction: column; margin: 15px; cursor: pointer; 
+                    @media screen and (max-width: 767px){
+                        width: 25%; height: 80px; margin: 5px;
+                    }
+                    i { font-size: 1.7rem; }
+                    p { margin: 5px 0 0 0; text-transform: uppercase; font-weight: bold; border-bottom: solid 2px white;}
+                    &:hover {
+                        p { border-bottom: solid 2px black; }
+                    }
+                    &.active { border-width: 0; background: linear-gradient(225deg, #518DC9 0%, #782c7f 100%);
+                        i { color: white;}
+                        p { color: white; font-weight: bold; border-bottom: solid 2px transparent;}
+                        &:hover {
+                            p { border-bottom: solid 2px white; }
+                        }
+                    }
+                    &.disable { background: #eeeeee; cursor: not-allowed;
+                        p { border-bottom: solid 2px #eeeeee; }
+                    }
+                }
+            }
+            .metaWrapper { display: flex; justify-content: space-around;
+                p { margin: 0;}
+            }
+            
+            .feature-body { padding: 0 15px;
+                @media (max-width: 767px){
+                    padding: 0 5px;
+                }
+                i { width: 15px; }
+                .controlGroup {
+                    button { width: 160px; font-size: 0.7rem; padding: 8px; border-radius: 8px; margin-top: 5px; 
+                        i { font-size: 0.9rem; color: white; opacity: 1;}
+                    }
+                    .right { position: relative; float: right; }
+                    .left { position: relative; float: left;
+                        button { width: 120px; margin-right: 10px; }
+                    }
+                }
+                .tableWrapper {
+                    padding: 5px;
+                }
+                .createStep { padding: 10px;
+                    ion-row { padding: 10px 5px; }
+                    a { font-size: 1.1rem; }
+                    .heading { font-size: 1.1rem; }
+                    .agreeStatus { padding-left: 30px; font-size: 1rem; }
+                    .uploadButton { color: #fff; width: 150px; height: 35px; padding: 0; margin: 10px 30px;}
+                }
+            }
+            a { font-size: 0.95rem; padding: 0;}
+        }
+        .sidemenu { position: absolute; right: 0; height: 100%; width: 270px; top: 0; border-bottom-width: 1px;
+            @media screen and (max-width: 767px) {
+                width: 0; border-width: 0;
+            }
+        }
+    }
+}
+.menuExpand { margin-right: 270px; 
+    @media screen and (max-width: 767px) {
+        margin-right: 0px;
+    }
+}
